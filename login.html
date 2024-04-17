@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <form
+        action="./login.php"
+        method="post"
+        name="myForm"
+        onsubmit="return validate()"
+      >
+        <h2>Login</h2>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="uname" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="pwd" required />
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="cpwd" required />
+        </div>
+        <div class="input-group">
+          <label for="contact">Contact Number</label>
+          <input type="password" id="contact" name="cnt" required />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script>
+      function validate() {
+        var uname = document.myForm.uname.value;
+        var pwd = document.myForm.pwd.value;
+        var cpwd = document.myForm.cpwd.value;
+        var cnt = document.myForm.cnt.value;
+
+        if (uname == null || uname == "") {
+          alert("Username should not be empty !!!!");
+          return false;
+        }
+        if (pwd == null || pwd == "") {
+          alert("Password should not be empty !!!!");
+          return false;
+        }
+
+        if (pwd.length < 6) {
+          alert("Password must be greater than 6 characters !!!!");
+          return false;
+        }
+
+        if (cpwd != pwd) {
+          alert("Password and Confirm password must be same!!!!");
+          return false;
+        }
+        if (cnt == null || cnt == "") {
+          alert("Contact number should not be empty !!!!");
+          return false;
+        }
+        if (isNaN(cnt)) {
+          alert("Contact number must be in numeric !!!!");
+          return false;
+        }
+
+        if (cnt.length < 10) {
+          alert("Contact must be greater than 10 digits !!!!");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

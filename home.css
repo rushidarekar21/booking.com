@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Capriola', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+    background-color: #000;
+    color: white;
+}
+h1{
+  line-height: 50px;
+  color: #db0000;
+}
+
+.nav {
+    height: 100px;
+    color: #db0000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav h1 {
+    font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+    color: #db0000;
+    padding: 15px;
+    margin-left: 30px;
+    width: 250px;
+}
+
+.icons {
+    display: flex;
+    margin-right: 25px;
+}
+
+.nav a {
+    margin-right: 25px;
+    margin-top: 20px;
+
+}
+
+.nav a i {
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #db0000;
+    margin: 10px;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    list-style: none; /* Add this line to remove list dots */
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+.navbar li {
+    display: inline-block; /* Add this line to make list items appear horizontally */
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    margin: 10px 25px;
+    transition: color 2s;
+}
+.navbar i{
+    margin-right: 10px;
+    transition: color 2s;
+}
+
+@keyframes bounceAnimation {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-25px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.navbar li:hover a {
+    color: red;
+    
+}
+
+.navbar li:hover a i {
+    color: red;
+    animation: bounceAnimation 2s ease;
+}
+
+.nav-text{
+    margin: 30px 45px;
+    font-size: 30px;
+}
+
+.nav-text span{
+    color: #db0000;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.offers{
+    margin: 15px 40px;
+    
+    
+}
+
+.offers h1{
+     line-height: 50px;
+     background: transparent;
+    
+    
+}
+
+.offer_cards{
+    display: flex;
+    margin: 20px;
+    
+
+
+}
+
+.offer{
+    
+    height: 200px;
+    width: 45%;
+    margin:0px 20px;
+    padding: 30px 15px;
+    border-radius: 2rem;
+    line-height: 25px;
+    
+}
+
+#offer1{
+    background-image: url('plane_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#offer2{
+    background-image: url('family_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.offer span{
+    font-size: 20px;
+    background: transparent;
+}
+
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    .card {
+      display: inline-block;
+    }
+  }
+
+
+  .container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 40px;
+  }
+  .slider-wrapper {
+    position: relative;
+  }
+  .slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  .slider-wrapper .slide-button:hover {
+    background: #404040;
+  }
+  .slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+  }
+  .slider-wrapper .slide-button#next-slide {
+    right: -25px;
+  }
+  .slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+  }
+  .slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .slider-scrollbar .scrollbar-track {
+    background: #000;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+  }
+  .slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #ccc ;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+  }
+  .slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+  }
+  .slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+
+.image-item img{
+    width: 200px;
+    height : 300px
+}
+
+
+.slider-wrapper{
+  margin: 30px;
+
+}
+.slider-wrapper button{
+    background-color: #c0b7b7;
+}
+
+.hotel-card{
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.hotel-card img{
+  border-radius: 2rem;
+}
+
+.trending_destinations{
+  margin: 0px 30px;
+}
+
+.trending_destinations h1{
+  line-height: 50px;
+}
+
+
+.t_and_c_info {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 5px solid #db0000;
+    border-radius: 55px;
+    /* background: linear-gradient(to bottom, #8e44ad, #2c3e50); */
+    display: flex;
+    /* background-color: #431C52; */
+    
+
+}
+
+
+li {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #db0000;
+}
+
+s
+
+p, ul {
+    color: #777;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+
+.tc1{
+    margin: 10px;
+
+}
+
+.tcCon h1{
+  
+  text-align: center;
+  margin-top: 30px;
+}
+
+button{
+  width: 150px;
+  height: 50px;
+  background-color: #db0000;
+  border-radius: 2rem;
+  font-size: 25px;
+  margin : 30px;
+  cursor:grab;
+}
+
+#btn{
+  text-align: center;
+  
+}

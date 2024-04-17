@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    padding-bottom: 10px;
+    
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("backgroundimg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    color: white;
+    text-decoration: none;
+}
+.header {
+    background-color : #1f1f21;
+    color: white;
+    display: fixed;
+}
+
+h1{ 
+    margin-left: 60px;
+    padding-top: 20px;
+    position: relative ;
+    color:white;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 30px;
+    margin: 15px;
+    
+    
+}
+
+
+
+
+
+.navbar ul{
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    align-items: center;
+    position: absolute;
+    left: 800px;
+    bottom: 650px;
+    /* justify-content: space-between; */
+    list-style-type: none;
+    font-size: 20px;
+
+    
+}
+.navbar ul a{
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li{
+    
+    padding : 10px 40px;
+    border: 2px solid black;
+    margin :0px 10px;
+    border-radius: 20px;
+    border-color: aliceblue;
+    background-color: black;
+}
+
+.navbar ul  :hover{
+   /* color: #95c7cc; */
+   color: black;
+   background-color: white;
+   transition: 1s;
+   transform:translateY(10px);
+   font-size: 25px;
+}
+
+#parahead{
+    font-size: 90px;
+    position: absolute;
+    left: 100px;
+    top: 250px;
+    color: #1f1f21;
+    
+}
+
+#paradesc{
+    font-size: 20px;
+    position: absolute;
+    bottom: 70px;
+    left: 50px;
+    color: black;
+    line-height: 25px;
+}
